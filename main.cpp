@@ -25,9 +25,14 @@ int main() {
 //            }
 //        }
 //    }
-    std::vector<std::vector<std::string>> chromosome;
-    Chromosome proba(JOBS, MACHINES, chromosome);
-    cout<<proba.to_string()<<endl;
+//    std::vector<std::vector<std::string>> chromosome;
+//    Chromosome proba(JOBS, MACHINES, chromosome);
+//    cout<<proba.to_string()<<endl;
+
+    vector<Chromosome> chromosomes = generate_chromosome_list(3, JOBS, MACHINES, {});
+    for(auto& ch : chromosomes){
+        cout<<ch.to_string()<<endl;
+    }
 
     return 0;
 }

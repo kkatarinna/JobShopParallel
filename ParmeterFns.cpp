@@ -26,19 +26,19 @@ vector<string> extract_Jobs_Keys(map<string, int> jobs){
     return keys;
 }
 
-//std::vector<Chromosome> generate_chromosome_list(int population_size, std::map<std::string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::vector< std::vector<std::vector<std::string>> > chromosomes){
-//    std::vector<Chromosome> chromosome_list;
-//    if (chromosomes.size() != 0) {
-//        for (auto chromosome : chromosomes) {
-//            chromosome_list.push_back(Chromosome(jobs, machines, chromosomes));
-//        }
-//    } else {
-//        for (int i = 0; i < population_size; i++) {
-//            chromosome_list.push_back(Chromosome(jobs, machines, {}));
-//        }
-//    }
-//    return chromosome_list;
-//}
+std::vector<Chromosome> generate_chromosome_list(int population_size, std::map<std::string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::vector< std::vector<std::vector<std::string>> > chromosomes){
+    std::vector<Chromosome> chromosome_list;
+    if (chromosomes.size() != 0) {
+        for (auto chromosome : chromosomes) {
+            chromosome_list.push_back(Chromosome(jobs, machines, chromosome));
+        }
+    } else {
+        for (int i = 0; i < population_size; i++) {
+            chromosome_list.push_back(Chromosome(jobs, machines, {}));
+        }
+    }
+    return chromosome_list;
+}
 
 std::map<std::string, std::map<std::string, std::vector<int>>> generate_Machines(int num_of_machines, const std::map<std::string, int> jobs, int machine_times_max) {
     std::map<std::string, std::map<std::string, std::vector<int>>> machines;
