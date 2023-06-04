@@ -24,6 +24,11 @@ Chromosome::Chromosome(std::map<std::string, int> jobs, std::map<std::string, st
             this->chromosome = chromosome;
         }
     }
+
+Chromosome::Chromosome() {
+    this->chromosome = {};
+}
+
 std::string Chromosome::to_string() {
     std::string str = "iz klase : ";
     for (int i = 0; i < this->chromosome.size(); i++) {

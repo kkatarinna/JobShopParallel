@@ -29,7 +29,7 @@ int main() {
       Chromosome proba(JOBS, MACHINES, chromosome);
 //    cout<<proba.to_string()<<endl;
 
-    vector<Chromosome> chromosomes = generate_chromosome_list(3, JOBS, MACHINES, {});
+    vector<Chromosome> chromosomes = generate_chromosome_list(4, JOBS, MACHINES, {});
     for(auto& ch : chromosomes){
         cout<<ch.to_string()<<endl;
     }
@@ -38,6 +38,16 @@ int main() {
     for(auto& ch : test){
        cout<<ch.second<<endl;
     }
+
+    std::vector<std::pair <Chromosome, Chromosome>> testic = rulette_selection(test);
+    for (auto it = testic.begin(); it != testic.end(); ++it) {
+        std::cout << it->first.to_string() << " " << it->second.to_string() << std::endl;
+    }
+
+//    std::vector<Chromosome> newgen = crossover(testic);
+//    for(auto& ch : newgen){
+//        cout<<ch.to_string()<<endl;
+//    }
 
     return 0;
 }

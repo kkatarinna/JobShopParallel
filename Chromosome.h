@@ -18,6 +18,7 @@ private:
 public:
     std::vector<std::vector<std::string>> chromosome;
     Chromosome(std::map<std::string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::vector<std::vector<std::string>> chromosome);
+    Chromosome();
     std::string to_string();
     bool operator<(const Chromosome& rhs) const;
     bool operator==(const Chromosome& other) const;
