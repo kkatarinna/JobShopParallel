@@ -24,6 +24,11 @@ Chromosome::Chromosome(std::map<std::string, int> jobs, std::map<std::string, st
             this->chromosome = chromosome;
         }
     }
+
+Chromosome::Chromosome() {
+    this->chromosome = {};
+}
+
 std::string Chromosome::to_string() {
     std::string str = "iz klase : ";
     for (int i = 0; i < this->chromosome.size(); i++) {
@@ -103,7 +108,33 @@ std::vector<std::vector<std::string>> Chromosome::generate_chromosome(std::map<s
         return chromosome;
 
     }
+
 }
+
+bool Chromosome::operator<(const Chromosome& rhs) const {
+    if (chromosome.size() != rhs.chromosome.size()) {
+        return chromosome.size() < rhs.chromosome.size();
+    }
+
+    // Compare the elements of the chromosome vector
+    for (size_t i = 0; i < chromosome.size(); i++) {
+        // Compare the elements of the chromosome vector at index 'i'
+        // based on your desired comparison logic
+        // For example, you can compare strings lexicographically
+        if (chromosome[i] != rhs.chromosome[i]) {
+            return chromosome[i] < rhs.chromosome[i];
+        }
+    }
+
+    // Chromosome objects are equal
+    return false;
+}
+
+bool Chromosome::operator==(const Chromosome& other) const {
+    return chromosome == other.chromosome;
+}
+
+
 
 
 

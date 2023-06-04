@@ -4,6 +4,7 @@
 #include <string>
 #include "Chromosome.h"
 #include "constants.h"
+#include "crossoverFunc.h"
 
 int main() {
 
@@ -25,9 +26,31 @@ int main() {
 //            }
 //        }
 //    }
-    std::vector<std::vector<std::string>> chromosome;
-    Chromosome proba(JOBS, MACHINES, chromosome);
-    cout<<proba.to_string()<<endl;
+      std::vector<std::vector<std::string>> chromosome;
+      Chromosome proba(JOBS, MACHINES, chromosome);
+//    cout<<proba.to_string()<<endl;
+
+    vector<Chromosome> chromosomes = generate_chromosome_list(4, JOBS, MACHINES, {});
+    for(auto& ch : chromosomes){
+        cout<<ch.to_string()<<endl;
+    }
+
+    std::map<Chromosome, int> test = get_chromosome_rang_dict(chromosomes, JOBS, MACHINES);
+    for(auto& ch : test){
+       cout<<ch.second<<endl;
+    }
+
+    std::vector<std::pair <Chromosome, Chromosome>> testic = rulette_selection(test);
+    for (auto it = testic.begin(); it != testic.end(); ++it) {
+        std::cout << it->first.to_string() << " " << it->second.to_string() << std::endl;
+    }
+
+    std::vector<Chromosome> newgen = crossover(testic);
+    cout<<"======================================================="<<endl;
+    for(auto& ch : newgen){
+
+        cout<<ch.to_string()<<endl;
+    }
 
     return 0;
 }
