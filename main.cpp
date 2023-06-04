@@ -25,13 +25,18 @@ int main() {
 //            }
 //        }
 //    }
-//    std::vector<std::vector<std::string>> chromosome;
-//    Chromosome proba(JOBS, MACHINES, chromosome);
+      std::vector<std::vector<std::string>> chromosome;
+      Chromosome proba(JOBS, MACHINES, chromosome);
 //    cout<<proba.to_string()<<endl;
 
     vector<Chromosome> chromosomes = generate_chromosome_list(3, JOBS, MACHINES, {});
     for(auto& ch : chromosomes){
         cout<<ch.to_string()<<endl;
+    }
+
+    std::map<Chromosome, int> test = get_chromosome_rang_dict(chromosomes, JOBS, MACHINES);
+    for(auto& ch : test){
+       cout<<ch.second<<endl;
     }
 
     return 0;
