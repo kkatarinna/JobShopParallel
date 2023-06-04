@@ -4,6 +4,7 @@
 #include <string>
 #include "Chromosome.h"
 #include "constants.h"
+#include "crossoverFunc.h"
 
 int main() {
 
@@ -44,10 +45,12 @@ int main() {
         std::cout << it->first.to_string() << " " << it->second.to_string() << std::endl;
     }
 
-//    std::vector<Chromosome> newgen = crossover(testic);
-//    for(auto& ch : newgen){
-//        cout<<ch.to_string()<<endl;
-//    }
+    std::vector<Chromosome> newgen = crossover(testic);
+    cout<<"======================================================="<<endl;
+    for(auto& ch : newgen){
+
+        cout<<ch.to_string()<<endl;
+    }
 
     return 0;
 }

@@ -20,6 +20,5 @@ std::map<std::string, std::map<std::string, std::vector<int>>> generate_Machines
 int fitness_function(Chromosome chromosome, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::map<std::string, int> jobs, bool is_elitis);
 std::map<Chromosome, int> get_chromosome_rang_dict(std::vector<Chromosome> chromosomes_list, map<string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines);
 std::vector<std::pair <Chromosome, Chromosome>> rulette_selection(std::map<Chromosome, int> &sorted_chromosome_dict);
-std::vector<Chromosome> crossover(const std::vector<std::pair<Chromosome, Chromosome>>& parents);
 
 #endif //PROJEKAT_PARMETERFNS_H

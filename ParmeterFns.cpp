@@ -26,15 +26,6 @@ vector<string> extract_Jobs_Keys(map<string, int> jobs){
     return keys;
 }
 
-vector<string> extract_Machines_Keys(std::map<std::string, std::map<std::string, std::vector<int>>> machines){
-    vector<string> keys;
-    for (const auto& pair : machines) {
-        keys.push_back(pair.first);
-    }
-
-    return keys;
-}
-
 std::vector<Chromosome> generate_chromosome_list(int population_size, std::map<std::string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::vector< std::vector<std::vector<std::string>> > chromosomes){
     std::vector<Chromosome> chromosome_list;
     if (chromosomes.size() != 0) {
