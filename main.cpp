@@ -5,6 +5,7 @@
 #include "Chromosome.h"
 #include "constants.h"
 #include "crossoverFunc.h"
+#include "mutation.h"
 
 int main() {
 
@@ -52,5 +53,12 @@ int main() {
         cout<<ch.to_string()<<endl;
     }
 
+    std::vector<Chromosome> mutirani = mutation(newgen, 0.7);
+    cout<<"======================================================="<<endl;
+    cout<<"MUTIRANI"<<endl;
+    for(auto& ch : mutirani){
+
+        cout<<ch.to_string()<<endl;
+    }
     return 0;
 }

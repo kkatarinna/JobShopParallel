@@ -15,6 +15,14 @@
 
 using namespace std;
 
+const vector<std::vector<std::string>> &Chromosome::getChromosome() const {
+    return chromosome;
+}
+
+void Chromosome::setChromosome(const vector<std::vector<std::string>> &chromosome) {
+    Chromosome::chromosome = chromosome;
+}
+
 Chromosome::Chromosome(std::map<std::string, int> jobs, std::map<std::string, std::map<std::string, std::vector<int>>> machines, std::vector<std::vector<std::string>> chromosome)
 
 {

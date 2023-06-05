@@ -10,6 +10,7 @@
 #include <random>
 #include <vector>
 #include "Chromosome.h"
+#include "constants.h"
 
 std::vector<std::string> extract_Machines_Keys(std::map<std::string, std::map<std::string, std::vector<int>>> machines);
 std::vector<Chromosome> crossover(const std::vector<std::pair<Chromosome, Chromosome>>& parents);

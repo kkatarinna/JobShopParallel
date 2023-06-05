@@ -22,6 +22,10 @@ public:
     std::string to_string();
     bool operator<(const Chromosome& rhs) const;
     bool operator==(const Chromosome& other) const;
-    };
+
+    const std::vector<std::vector<std::string>> &getChromosome() const;
+
+    void setChromosome(const std::vector<std::vector<std::string>> &chromosome);
+};
 
 #endif //PROJEKAT_CHROMOSOME_H

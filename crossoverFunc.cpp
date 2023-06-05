@@ -4,10 +4,6 @@
 
 #include "crossoverFunc.h"
 
-const std::map<std::string, std::map<std::string, std::vector<int>>> MACHINES;
-const std::vector<std::string> JOBS_KEYS;
-const std::map<std::string, int> JOBS;
-
 std::vector<std::string> extract_Machines_Keys(std::map<std::string, std::map<std::string, std::vector<int>>> machines){
     std::vector<std::string> keys;
     for (const auto& pair : machines) {
