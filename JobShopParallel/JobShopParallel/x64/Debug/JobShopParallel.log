@@ -1,0 +1,27 @@
+﻿  constants.cpp
+  crossoverFunc.cpp
+C:\Users\Stevan\Desktop\GITHub\PP\JSParallel\JobShopParallel\crossoverFunc.cpp(44,114): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Stevan\Desktop\GITHub\PP\JSParallel\JobShopParallel\crossoverFunc.cpp(67,114): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  geneticAlgorithm.cpp
+  main.cpp
+  mutation.cpp
+C:\Users\Stevan\Desktop\GITHub\PP\JSParallel\JobShopParallel\mutation.cpp(21,79): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Stevan\Desktop\GITHub\PP\JSParallel\JobShopParallel\mutation.cpp(44,101): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+  Generating Code...
+  JobShopParallel.vcxproj -> C:\Users\Stevan\Desktop\Test\JobShopParallel\x64\Debug\JobShopParallel.exe
