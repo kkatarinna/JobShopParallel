@@ -4,3 +4,5 @@ project(Projekat)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Projekat main.cpp Chromosome.cpp Chromosome.h constants.h ParmeterFns.cpp ParmeterFns.h)
+find_package(TBB CONFIG REQUIRED)
+target_link_libraries(Projekat PRIVATE TBB::tbb TBB::tbbmalloc)
